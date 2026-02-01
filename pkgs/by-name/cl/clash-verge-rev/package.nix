@@ -12,17 +12,18 @@
 }:
 let
   pname = "clash-verge-rev";
-  version = "2.4.3";
+  # Please keep service version in sync
+  version = "2.4.5";
 
   src = fetchFromGitHub {
     owner = "clash-verge-rev";
     repo = "clash-verge-rev";
     tag = "v${version}";
-    hash = "sha256-GmoeOLKxdW1x6PHtslwNPVq8wDWA413NHA/VeDRb4mA=";
+    hash = "sha256-FFo0jy8RF2nnb2lA9mLfW7jhbUCv+Sq0dd0P0iTv2SQ=";
   };
 
-  pnpm-hash = "sha256-qDwXPTfh1yOlugZe1UPUMKRyZOSagG4lX2eiFACgHRw=";
-  vendor-hash = "sha256-z5xVbqh+CiaTDtAx2VPQ4UjliYnV44tdp3pS8vzb1K4=";
+  pnpm-hash = "sha256-SHFMfwqBtmMZutJzCGB4SSPg4T620q58egOfu8d7Jzg=";
+  vendor-hash = "sha256-Mf6tnpogs/q5eJ0a0n8ItoX2Vu3/1FVy3v3Lqefktd4=";
 
   service = callPackage ./service.nix {
     inherit
@@ -85,4 +86,6 @@ stdenv.mkDerivation {
 
     runHook postInstall
   '';
+  # For testing convenience
+  passthru = { inherit unwrapped service; };
 }

@@ -1,0 +1,39 @@
+diff --git a/Cargo.lock b/Cargo.lock
+index 10804f5c..d75bcbe5 100644
+--- a/Cargo.lock
++++ b/Cargo.lock
+@@ -7342,7 +7342,7 @@ dependencies = [
+  "parking_lot",
+  "raw-window-handle",
+  "scopeguard",
+- "tao-macros 0.1.3 (git+https://github.com/tauri-apps/tao)",
++ "tao-macros",
+  "unicode-segmentation",
+  "url",
+  "windows 0.61.3",
+@@ -7362,16 +7362,6 @@ dependencies = [
+  "syn 2.0.114",
+ ]
+ 
+-[[package]]
+-name = "tao-macros"
+-version = "0.1.3"
+-source = "git+https://github.com/tauri-apps/tao#e196538f989894fcb92401fced54d7d3a65fc91a"
+-dependencies = [
+- "proc-macro2",
+- "quote",
+- "syn 2.0.114",
+-]
+-
+ [[package]]
+ name = "tap"
+ version = "1.0.1"
+@@ -9973,7 +9963,7 @@ dependencies = [
+  "raw-window-handle",
+  "sha2 0.10.9",
+  "soup3",
+- "tao-macros 0.1.3 (registry+https://github.com/rust-lang/crates.io-index)",
++ "tao-macros",
+  "thiserror 2.0.18",
+  "tracing",
+  "url",
